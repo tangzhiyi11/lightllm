@@ -140,7 +140,6 @@ def token_att_fwd2_int8v(prob, v, v_scale, out, Req_to_tokens, B_req_idx, B_Star
     )
     return
 
-
 def torch_att(V, P, bs, seqlen, num_head, head_dim):
     V = V.view(bs, seqlen, num_head, head_dim).transpose(1, 2)
     P = P.reshape(num_head, bs, 1, seqlen).transpose(0, 1)
